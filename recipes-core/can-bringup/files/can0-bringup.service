@@ -1,0 +1,12 @@
+[Unit]
+Description=Bring up CAN0 interface on CM4 carrier
+After=sysinit.target network-pre.target
+Wants=network-pre.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/can0-bringup.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
