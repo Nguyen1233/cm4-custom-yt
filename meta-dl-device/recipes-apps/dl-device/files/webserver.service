@@ -1,0 +1,13 @@
+
+[Unit]
+Description=WebServer
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/webserver
+ExecStop=killall webserver
+Restart=always
+Type=simple
+
+[Install]
+WantedBy=multi-user.target

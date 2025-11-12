@@ -1,0 +1,13 @@
+
+[Unit]
+Description=SerialListener
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/seriallistener
+ExecStop=killall seriallistener
+Restart=always
+Type=simple
+
+[Install]
+WantedBy=multi-user.target

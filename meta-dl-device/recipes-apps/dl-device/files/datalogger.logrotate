@@ -1,0 +1,13 @@
+
+/var/log/DataLogger/*.log {
+    daily
+    rotate 7
+    compress
+    missingok
+    notifempty
+    create 0640 root root
+    postrotate
+        systemctl restart datalogger.service > /dev/null 2>&1 || true
+    endscript
+}
+
