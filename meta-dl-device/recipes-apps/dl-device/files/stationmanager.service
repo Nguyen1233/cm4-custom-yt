@@ -1,0 +1,14 @@
+
+[Unit]
+Description=StationManager
+After=network.target dbus.service
+Requires=dbus.service
+
+[Service]
+ExecStart=/usr/bin/stationmanager
+ExecStop=killall stationmanager
+Restart=always
+Type=simple
+
+[Install]
+WantedBy=multi-user.target

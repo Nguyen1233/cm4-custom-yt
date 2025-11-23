@@ -1,5 +1,5 @@
 
-/var/log/DataLogger/*.log {
+/opt/datalogger/log/DataLogger/*.log {
     daily
     rotate 7
     compress

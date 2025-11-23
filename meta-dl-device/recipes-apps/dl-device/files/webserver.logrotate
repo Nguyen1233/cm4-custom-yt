@@ -1,5 +1,5 @@
 
-/var/log/WebServer/*.log {
+/opt/datalogger/log/WebServer/*.log {
     daily
     rotate 7
     compress

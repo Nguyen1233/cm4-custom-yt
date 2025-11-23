@@ -1,5 +1,5 @@
 
-/var/log/SerialListener/*.log {
+/opt/datalogger/log/StationManager/*.log {
     daily
     rotate 7
     compress
@@ -7,7 +7,7 @@
     notifempty
     create 0640 root root
     postrotate
-        systemctl restart seriallistener.service > /dev/null 2>&1 || true
+        systemctl restart stationmanager.service > /dev/null 2>&1 || true
     endscript
 }
 
